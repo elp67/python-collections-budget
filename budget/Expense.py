@@ -16,7 +16,8 @@ class Expenses():
 
     # Read in the December spending data, row[2] is the $$, and need to format $$
     def read_expenses(self,filename):
-        with open(filename, newline='') as csvfile:
+        #with open(filename, newline='') as csvfile:
+        with open(filename) as csvfile:
             csvreader = csv.reader(csvfile, delimiter=',')
             for row in csvreader:
                 if '-' not in row[3]:
